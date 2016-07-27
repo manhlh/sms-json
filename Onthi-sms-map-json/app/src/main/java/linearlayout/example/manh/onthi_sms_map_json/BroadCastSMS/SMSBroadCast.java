@@ -54,8 +54,8 @@ public class SMSBroadCast extends BroadcastReceiver {
 //               context.startActivity(smsintent);
 //
                 Intent intent1 = new Intent(context,SmsService.class);
-                intent1.putExtra("namesv",senderNum);
-                intent1.putExtra("mobilesv",message);
+                intent1.putExtra("mobilesv",senderNum);
+                intent1.putExtra("messagesv",message);
                 intent1.putExtra("timesv",time);
                 intent1.addFlags(intent1.FLAG_ACTIVITY_NEW_TASK);
                 context.startService(intent1);
